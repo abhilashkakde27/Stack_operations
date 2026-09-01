@@ -1,0 +1,75 @@
+#include<iostream>
+#define Max 5
+using namespace std;
+class Stack
+{
+public:
+  int A[Max];
+  int top;
+  
+  Stack()
+  {
+    top = -1;
+  }
+  
+  void push(int value)
+  {
+    if(top == Max - 1)
+    {
+      cout<<"Stack will overflow\n";      
+    }
+    else
+    {
+      top++;
+      A[top] = value;
+      cout<<value<<"is the element pushed to the stack\n";
+    }
+    }
+    
+    void pop()
+    {
+      if(top == -1)
+      {
+        cout<<"\nThe stack is underflow";
+      }
+      else
+      {
+        cout<<A[top]<<"is popped from the stack\n";
+        top--;
+      }
+      }
+    
+    void display()
+    {
+      if(top == -1)
+      {
+        cout<<"\nThe stack is empty";
+      }
+      else
+      {
+        for(int i = 0; i<= 0; i++)
+        {
+          cout<<A[i]<<endl;
+        }
+      }
+      
+    }
+    };
+    
+    int main()
+    {
+      Stack s1;
+      s1.push(10);
+      s1.push(20);
+      s1.push(30);
+      s1.push(40);
+      s1.display();
+      s1.pop();
+      s1.push(50);
+      s1.display();
+      
+      return 0;
+      
+      }
+
+    
